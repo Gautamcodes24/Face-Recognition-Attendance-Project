@@ -55,7 +55,7 @@ while True: #to get frame one by one
     imgs=cv2.cvtColor(imgs,cv2.COLOR_BGR2RGB)
 
     facesCurFrame=face_recognition.face_locations(imgs)
-    encodesCurFrame=face_recognition.face_encodings(imgs,facesCurFrame)  #jaha pr error aa raha tha
+    encodesCurFrame=face_recognition.face_encodings(imgs,facesCurFrame)  
 
     for encodeFace,faceLoc in zip(encodesCurFrame,facesCurFrame): #taking one by one and giving for comp
         matches=face_recognition.compare_faces(encodeListKnow,encodeFace)
